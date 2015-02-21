@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MazeBuilder">
+    <Reference Include="MazeBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\MazeBuilder\MazeBuilder\bin\Debug\MazeBuilder.dll</HintPath>
     </Reference>
     <Reference Include="System" />

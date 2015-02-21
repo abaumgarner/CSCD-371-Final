@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MazeBuilder;
 
 namespace MazeTesterWinForm
 {
-    public partial class Maze_Tester : Form
+    public partial class MazeTester : Form
     {
         private Maze _maze;
 
-        public Maze_Tester()
+        public MazeTester()
         {
             InitializeComponent();
         }

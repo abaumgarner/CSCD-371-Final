@@ -1,11 +1,14 @@
-﻿namespace MazeTesterWinForm
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace MazeTesterWinForm
 {
-    partial class Maze_Tester
+    partial class MazeTester
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -107,7 +110,7 @@
             this.Controls.Add(this.btn_MoveNorth);
             this.Controls.Add(this.btn_Start);
             this.Controls.Add(this.txtBox_MazeOut);
-            this.Name = "Maze_Tester";
+            this.Name = "MazeTester";
             this.Text = "Maze Tester";
             this.Load += new System.EventHandler(this.Maze_Tester_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Maze_Tester_KeyDown);
@@ -118,12 +121,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBox_MazeOut;
-        private System.Windows.Forms.Button btn_Start;
-        private System.Windows.Forms.Button btn_MoveNorth;
-        private System.Windows.Forms.Button btn_MoveWest;
-        private System.Windows.Forms.Button btn_MoveEast;
-        private System.Windows.Forms.Button btn_MoveSouth;
+        private TextBox txtBox_MazeOut;
+        private Button btn_Start;
+        private Button btn_MoveNorth;
+        private Button btn_MoveWest;
+        private Button btn_MoveEast;
+        private Button btn_MoveSouth;
     }
 }
 
