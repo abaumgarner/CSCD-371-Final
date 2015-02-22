@@ -37,6 +37,7 @@ namespace MazeTesterWinForm
             this.btn_MoveWest = new System.Windows.Forms.Button();
             this.btn_MoveEast = new System.Windows.Forms.Button();
             this.btn_MoveSouth = new System.Windows.Forms.Button();
+            this.btn_Database = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBox_MazeOut
@@ -99,11 +100,22 @@ namespace MazeTesterWinForm
             this.btn_MoveSouth.UseVisualStyleBackColor = true;
             this.btn_MoveSouth.Click += new System.EventHandler(this.btn_MoveSouth_Click);
             // 
-            // Maze_Tester
+            // btn_Database
+            // 
+            this.btn_Database.Location = new System.Drawing.Point(559, 399);
+            this.btn_Database.Name = "btn_Database";
+            this.btn_Database.Size = new System.Drawing.Size(75, 23);
+            this.btn_Database.TabIndex = 6;
+            this.btn_Database.Text = "Database";
+            this.btn_Database.UseVisualStyleBackColor = true;
+            this.btn_Database.Click += new System.EventHandler(this.btn_Database_Click);
+            // 
+            // MazeTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 605);
+            this.Controls.Add(this.btn_Database);
             this.Controls.Add(this.btn_MoveSouth);
             this.Controls.Add(this.btn_MoveEast);
             this.Controls.Add(this.btn_MoveWest);
@@ -127,6 +139,7 @@ namespace MazeTesterWinForm
         private Button btn_MoveWest;
         private Button btn_MoveEast;
         private Button btn_MoveSouth;
+        private Button btn_Database;
     }
 }
 

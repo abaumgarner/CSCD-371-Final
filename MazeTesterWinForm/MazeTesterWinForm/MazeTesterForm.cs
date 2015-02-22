@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Data;
+using System.IO;
 using System.Windows.Forms;
 using MazeBuilder;
+using DatabaseHandler;
 
 namespace MazeTesterWinForm
 {
@@ -77,6 +80,12 @@ namespace MazeTesterWinForm
         {
             _maze.MoveWest();
             DisplayMaze();
+        }
+
+        private void btn_Database_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists("questions.db"))
+                Database.CreateDatabase();
         }
     }
 }
