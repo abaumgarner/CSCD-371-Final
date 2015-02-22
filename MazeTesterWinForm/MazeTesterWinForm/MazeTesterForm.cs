@@ -81,5 +81,12 @@ namespace MazeTesterWinForm
             if (!File.Exists("questions.db"))
                 Database.CreateDatabase();
         }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            string file = txtBox_File.Text;
+
+            Database.AddQuestionsFile(file);
+        }
     }
 }

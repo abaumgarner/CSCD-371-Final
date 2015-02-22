@@ -9,6 +9,7 @@ namespace DatabaseHandler
     {
         private static SQLiteCommand _sqliteCmd;
         private static SQLiteConnection _sqliteConn;
+        private static readonly string _defaultQuestionsFile = "questions.txt";
 
         public static void CreateDatabase()
         {
@@ -21,12 +22,12 @@ namespace DatabaseHandler
                 "CREATE TABLE allQuestions (question VARCHAR(300), options VARCHAR(300), answer VARCHAR(300));";
             _sqliteCmd.ExecuteNonQuery();
 
-            LoadQuestions();
+            LoadQuestions(_defaultQuestionsFile);
         }
 
-        private static void LoadQuestions()
+        private static void LoadQuestions(string file)
         {
-            var fileNames = GetQuestions();
+            var fileNames = GetQuestions(file);
 
             LoadQuestionsInDatabase(fileNames);
         }
@@ -49,10 +50,21 @@ namespace DatabaseHandler
             _sqliteConn.Close();
         }
 
-        private static ArrayList GetQuestions()
+        public static void ReloadDefaultQuestions()
+        {
+            if (_sqliteConn.State == ConnectionState.Closed)
+                OpenDatabase();
+
+            _sqliteCmd.CommandText = "DELETE FROM allQuestions";
+            _sqliteCmd.ExecuteNonQuery();
+
+            LoadQuestions(_defaultQuestionsFile);
+        }
+
+        private static ArrayList GetQuestions(string file)
         {
             var fileNames = new ArrayList();
-            var path = @"questions\questions.txt";
+            var path = @"questions\" + file;
             var fileInfo = new FileInfo(path);
 
             if (File.Exists(path))
@@ -71,26 +83,38 @@ namespace DatabaseHandler
 
         public static void OpenDatabase()
         {
-            _sqliteConn = new SQLiteConnection("Data Source = questions.db; Version = 3");
-            _sqliteConn.Open();
-            _sqliteCmd = _sqliteConn.CreateCommand();
+            if (!File.Exists("questions.db"))
+                CreateDatabase();
+            else
+            {
+                _sqliteConn = new SQLiteConnection("Data Source = questions.db; Version = 3");
+                _sqliteConn.Open();
+                _sqliteCmd = _sqliteConn.CreateCommand();
+            }
         }
 
-        public SQLiteConnection GetDatabaseConnection()
+        public static SQLiteConnection GetDatabaseConnection()
         {
             return _sqliteConn;
         }
 
-        public SQLiteCommand GetSqLiteCommand()
+        public static SQLiteCommand GetSqLiteCommand()
         {
             return _sqliteCmd;
         }
 
-        public void CloseDatabase()
+        public static void CloseDatabase()
         {
             _sqliteCmd.Dispose();
             _sqliteConn.Close();
             _sqliteConn.Dispose();
+        }
+
+        public static void AddQuestionsFile(string file)
+        {
+            if (_sqliteConn == null)
+                OpenDatabase();
+            LoadQuestions(file);
         }
     }
 }
