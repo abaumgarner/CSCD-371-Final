@@ -112,9 +112,12 @@ namespace DatabaseHandler
 
         public static void AddQuestionsFile(string file)
         {
+            var str = file.Split('.');
+
             if (_sqliteConn == null)
                 OpenDatabase();
-            LoadQuestions(file);
+            if (str[str.Length - 1] == "txt")
+                LoadQuestions(file);
         }
     }
 }

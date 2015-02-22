@@ -84,7 +84,7 @@ namespace MazeTesterWinForm
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            string file = txtBox_File.Text;
+            var file = txtBox_File.Text;
 
             Database.AddQuestionsFile(file);
         }
