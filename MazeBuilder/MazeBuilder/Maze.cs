@@ -65,7 +65,7 @@ namespace MazeBuilder
                         maze += "P";
                     else
                         maze += " ";
-                    maze += "";
+                    maze += " ";
                 }
                 if (_rooms[i, j - 1].GetEasthDoor().IsLocked())
                     maze += "x";

@@ -106,7 +106,7 @@ namespace MazeBuilder
 
         private void LockBoarder(Maze maze)
         {
-            Room[,] rooms = maze.GetRooms();
+            var rooms = maze.GetRooms();
 
             int i, j;
 
@@ -114,9 +114,9 @@ namespace MazeBuilder
                 for (j = 0; j < maze.GetDimension(); j++)
                 {
                     if (i == 0)
-                        rooms[i,j].LockNorth();
+                        rooms[i, j].LockNorth();
                     if (j == 0)
-                        rooms[i,j].LockWest();
+                        rooms[i, j].LockWest();
                 }
         }
 

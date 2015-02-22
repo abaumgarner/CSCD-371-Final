@@ -42,11 +42,12 @@ namespace MazeTesterWinForm
             // 
             // txtBox_MazeOut
             // 
-            this.txtBox_MazeOut.Location = new System.Drawing.Point(236, 70);
+            this.txtBox_MazeOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox_MazeOut.Location = new System.Drawing.Point(275, 12);
             this.txtBox_MazeOut.Multiline = true;
             this.txtBox_MazeOut.Name = "txtBox_MazeOut";
             this.txtBox_MazeOut.ReadOnly = true;
-            this.txtBox_MazeOut.Size = new System.Drawing.Size(366, 261);
+            this.txtBox_MazeOut.Size = new System.Drawing.Size(275, 329);
             this.txtBox_MazeOut.TabIndex = 0;
             // 
             // btn_Start
@@ -124,7 +125,6 @@ namespace MazeTesterWinForm
             this.Controls.Add(this.txtBox_MazeOut);
             this.Name = "MazeTester";
             this.Text = "Maze Tester";
-            this.Load += new System.EventHandler(this.Maze_Tester_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Maze_Tester_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
