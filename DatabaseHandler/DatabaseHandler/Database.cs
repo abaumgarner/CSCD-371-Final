@@ -9,7 +9,7 @@ namespace DatabaseHandler
     {
         private static SQLiteCommand _sqliteCmd;
         private static SQLiteConnection _sqliteConn;
-        private static readonly string _defaultQuestionsFile = "questions.txt";
+        private const string DefaultQuestionsFile = "questions.txt";
 
         public static void CreateDatabase()
         {
@@ -22,7 +22,7 @@ namespace DatabaseHandler
                 "CREATE TABLE allQuestions (question VARCHAR(300), options VARCHAR(300), answer VARCHAR(300));";
             _sqliteCmd.ExecuteNonQuery();
 
-            LoadQuestions(_defaultQuestionsFile);
+            LoadQuestions(DefaultQuestionsFile);
         }
 
         private static void LoadQuestions(string file)
@@ -58,7 +58,7 @@ namespace DatabaseHandler
             _sqliteCmd.CommandText = "DELETE FROM allQuestions";
             _sqliteCmd.ExecuteNonQuery();
 
-            LoadQuestions(_defaultQuestionsFile);
+            LoadQuestions(DefaultQuestionsFile);
         }
 
         private static ArrayList GetQuestions(string file)
