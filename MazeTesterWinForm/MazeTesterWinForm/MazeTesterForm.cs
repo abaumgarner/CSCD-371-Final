@@ -95,6 +95,7 @@ namespace MazeTesterWinForm
             SQLiteDataReader result = Database.GetRandomQuestion();
             int i = 0;
             result.Read();
+            string[] titles = {"Question", "Choices", "Answer"};
 
             for(i =0; i < 3; i++)
             {
@@ -110,10 +111,10 @@ namespace MazeTesterWinForm
                         temp += item + Environment.NewLine;
                     }
 
-                    MessageBox.Show(temp);
+                    MessageBox.Show(temp, titles[i]);
                 }
                 else
-                    MessageBox.Show(result.GetString(i));
+                    MessageBox.Show(result.GetString(i), titles[i]);
             }
             result.Dispose();
         }
