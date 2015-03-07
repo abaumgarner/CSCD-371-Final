@@ -1,0 +1,6 @@
+C:\Users\Aaron\Desktop\CSCD-371-Final\TestDatabase\TestDatabase\bin\Debug\TestDatabase.exe.config
+C:\Users\Aaron\Desktop\CSCD-371-Final\TestDatabase\TestDatabase\obj\Debug\TestDatabase.csprojResolveAssemblyReference.cache
+C:\Users\Aaron\Desktop\CSCD-371-Final\TestDatabase\TestDatabase\bin\Debug\TestDatabase.exe
+C:\Users\Aaron\Desktop\CSCD-371-Final\TestDatabase\TestDatabase\bin\Debug\TestDatabase.pdb
+C:\Users\Aaron\Desktop\CSCD-371-Final\TestDatabase\TestDatabase\obj\Debug\TestDatabase.exe
+C:\Users\Aaron\Desktop\CSCD-371-Final\TestDatabase\TestDatabase\obj\Debug\TestDatabase.pdb

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using DatabaseHandler;
 using MazeBuilder;
 
 namespace MazeTesterWinForm
@@ -13,11 +15,6 @@ namespace MazeTesterWinForm
             InitializeComponent();
         }
 
-        private void Maze_Tester_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Maze_Tester_KeyDown(object sender, KeyEventArgs e)
         {
             DisplayMaze();
@@ -25,11 +22,11 @@ namespace MazeTesterWinForm
             {
                 if (e.KeyCode == Keys.W)
                     _maze.MoveNorth();
-                else if(e.KeyCode == Keys.S)
+                else if (e.KeyCode == Keys.S)
                     _maze.MoveSouth();
-                else if(e.KeyCode == Keys.A)
+                else if (e.KeyCode == Keys.A)
                     _maze.MoveWest();
-                else if(e.KeyCode == Keys.D)
+                else if (e.KeyCode == Keys.D)
                     _maze.MoveEast();
 
                 if (!_maze.MazeTraversal())
@@ -77,6 +74,19 @@ namespace MazeTesterWinForm
         {
             _maze.MoveWest();
             DisplayMaze();
+        }
+
+        private void btn_Database_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists("questions.db"))
+                Database.CreateDatabase();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            var file = txtBox_File.Text;
+
+            Database.AddQuestionsFile(file);
         }
     }
 }
