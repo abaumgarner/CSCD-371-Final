@@ -4,3 +4,9 @@ C:\Users\Aaron\Desktop\CSCD-371-Final\DatabaseHandler\DatabaseHandler\bin\Debug\
 C:\Users\Aaron\Desktop\CSCD-371-Final\DatabaseHandler\DatabaseHandler\obj\Debug\DatabaseHandler.dll
 C:\Users\Aaron\Desktop\CSCD-371-Final\DatabaseHandler\DatabaseHandler\obj\Debug\DatabaseHandler.pdb
 C:\Users\Aaron\Desktop\CSCD-371-Final\DatabaseHandler\DatabaseHandler\bin\Debug\System.Data.SQLite.dll
+P:\CSCD-371-Final\DatabaseHandler\DatabaseHandler\bin\Debug\DatabaseHandler.dll
+P:\CSCD-371-Final\DatabaseHandler\DatabaseHandler\bin\Debug\DatabaseHandler.pdb
+P:\CSCD-371-Final\DatabaseHandler\DatabaseHandler\bin\Debug\System.Data.SQLite.dll
+P:\CSCD-371-Final\DatabaseHandler\DatabaseHandler\obj\Debug\DatabaseHandler.csprojResolveAssemblyReference.cache
+P:\CSCD-371-Final\DatabaseHandler\DatabaseHandler\obj\Debug\DatabaseHandler.dll
+P:\CSCD-371-Final\DatabaseHandler\DatabaseHandler\obj\Debug\DatabaseHandler.pdb

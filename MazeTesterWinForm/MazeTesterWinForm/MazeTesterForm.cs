@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using DatabaseHandler;
 using MazeBuilder;
 using System.Data.SQLite;
+using QuestionDriver;
 
 namespace MazeTesterWinForm
 {
@@ -117,6 +118,18 @@ namespace MazeTesterWinForm
                     MessageBox.Show(result.GetString(i), titles[i]);
             }
             result.Dispose();
+        }
+
+        private void btn_QuestionObj_Click(object sender, EventArgs e)
+        {
+            Question question = new Question();
+
+            MessageBox.Show(question.GetQuestion(),"Question");
+
+            for(int i = 0; i < question.GetChoices().Length; i++)
+                MessageBox.Show(question.GetChoices()[i], "Choices");
+
+            MessageBox.Show(question.GetAnswer());
         }
     }
 }
