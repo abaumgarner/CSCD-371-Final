@@ -126,13 +126,13 @@ namespace DatabaseHandler
                 LoadQuestions(file);
         }
 
-        public static object GetRandomQuestion()
+        public static SQLiteDataReader GetRandomQuestion()
         {
             if (_sqliteConn == null)
                 OpenDatabase();
 
             _sqliteCmd.CommandText = "SELECT * FROM allQuestions order by random() limit 1;";
-            var result = _sqliteCmd.ExecuteScalar();
+            SQLiteDataReader result = _sqliteCmd.ExecuteReader();
 
             return result;
         }

@@ -20,6 +20,5 @@ C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\De
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\Debug\MazeTesterWinForm.pdb
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\Debug\DatabaseHandler.dll
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\Debug\MazeBuilder.dll
-C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\Debug\System.Data.SQLite.dll
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\Debug\DatabaseHandler.pdb
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeTesterWinForm\MazeTesterWinForm\bin\Debug\MazeBuilder.pdb

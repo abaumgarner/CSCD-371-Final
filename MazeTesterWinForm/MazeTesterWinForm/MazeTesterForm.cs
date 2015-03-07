@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using DatabaseHandler;
 using MazeBuilder;
+using System.Data.SQLite;
 
 namespace MazeTesterWinForm
 {
@@ -91,9 +92,30 @@ namespace MazeTesterWinForm
 
         private void btn_Question_Click(object sender, EventArgs e)
         {
-            var result = Database.GetRandomQuestion();
+            SQLiteDataReader result = Database.GetRandomQuestion();
+            int i = 0;
+            result.Read();
 
-            MessageBox.Show(result.ToString());
+            for(i =0; i < 3; i++)
+            {
+                if (i == 1)
+                {
+                    string str = result.GetString(i);
+                    string[] ara = str.Split(',');
+
+                    string temp = "";
+
+                    foreach (var item in ara)
+                    {
+                        temp += item + Environment.NewLine;
+                    }
+
+                    MessageBox.Show(temp);
+                }
+                else
+                    MessageBox.Show(result.GetString(i));
+            }
+            result.Dispose();
         }
     }
 }
