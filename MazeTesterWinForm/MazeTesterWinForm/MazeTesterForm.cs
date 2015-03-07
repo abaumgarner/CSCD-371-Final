@@ -88,5 +88,12 @@ namespace MazeTesterWinForm
 
             Database.AddQuestionsFile(file);
         }
+
+        private void btn_Question_Click(object sender, EventArgs e)
+        {
+            var result = Database.GetRandomQuestion();
+
+            MessageBox.Show(result.ToString());
+        }
     }
 }

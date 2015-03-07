@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace DatabaseHandler
 {
@@ -123,6 +124,17 @@ namespace DatabaseHandler
                 OpenDatabase();
             if (str[str.Length - 1] == "txt")
                 LoadQuestions(file);
+        }
+
+        public static object GetRandomQuestion()
+        {
+            if (_sqliteConn == null)
+                OpenDatabase();
+
+            _sqliteCmd.CommandText = "SELECT * FROM allQuestions order by random() limit 1;";
+            var result = _sqliteCmd.ExecuteScalar();
+
+            return result;
         }
     }
 }

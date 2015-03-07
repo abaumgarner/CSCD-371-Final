@@ -40,6 +40,7 @@ namespace MazeTesterWinForm
             this.btn_Database = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.txtBox_File = new System.Windows.Forms.TextBox();
+            this.btn_Question = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBox_MazeOut
@@ -130,11 +131,22 @@ namespace MazeTesterWinForm
             this.txtBox_File.Size = new System.Drawing.Size(114, 20);
             this.txtBox_File.TabIndex = 8;
             // 
+            // btn_Question
+            // 
+            this.btn_Question.Location = new System.Drawing.Point(652, 457);
+            this.btn_Question.Name = "btn_Question";
+            this.btn_Question.Size = new System.Drawing.Size(75, 23);
+            this.btn_Question.TabIndex = 9;
+            this.btn_Question.Text = "Question";
+            this.btn_Question.UseVisualStyleBackColor = true;
+            this.btn_Question.Click += new System.EventHandler(this.btn_Question_Click);
+            // 
             // MazeTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 605);
+            this.Controls.Add(this.btn_Question);
             this.Controls.Add(this.txtBox_File);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Database);
@@ -163,6 +175,7 @@ namespace MazeTesterWinForm
         private Button btn_Database;
         private Button btn_Add;
         private TextBox txtBox_File;
+        private Button btn_Question;
     }
 }
 
