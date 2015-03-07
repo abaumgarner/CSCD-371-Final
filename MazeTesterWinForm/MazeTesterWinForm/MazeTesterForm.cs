@@ -129,7 +129,7 @@ namespace MazeTesterWinForm
             for(int i = 0; i < question.GetChoices().Length; i++)
                 MessageBox.Show(question.GetChoices()[i], "Choices");
 
-            MessageBox.Show(question.GetAnswer());
+            MessageBox.Show(question.GetAnswer(), "Answer");
         }
     }
 }
