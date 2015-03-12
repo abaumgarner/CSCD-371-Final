@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
-using System.Runtime.InteropServices;
 
 namespace DatabaseHandler
 {
@@ -71,7 +70,6 @@ namespace DatabaseHandler
         {
             var fileNames = new ArrayList();
             var path = @"questions\" + file;
-            var fileInfo = new FileInfo(path);
 
             if (File.Exists(path))
             {
@@ -128,7 +126,7 @@ namespace DatabaseHandler
 
         public static SQLiteDataReader GetRandomQuestion()
         {
-            if (_sqliteConn == null)
+            if (_sqliteConn == null || !File.Exists("questions.db"))
                 OpenDatabase();
 
             _sqliteCmd.CommandText = "SELECT * FROM allQuestions order by random() limit 1;";

@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SQLite;
+﻿using System.Data.SQLite;
 using DatabaseHandler;
 
 namespace QuestionDriver
 {
     public class Question
     {
-        private string question;
-        private string[] choices;
-        private string answer;
+        private string _question;
+        private string[] _choices;
+        private string _answer;
 
         public Question()
         {
@@ -29,32 +24,32 @@ namespace QuestionDriver
 
         private void SetQuestion(string str)
         {
-            question = str;
+            _question = str;
         }
 
         private void SetChoices(string str)
         {
-            choices = str.Split(',');
+            _choices = str.Split(',');
         }
 
         private void SetAnswer(string str)
         {
-            answer = str;
+            _answer = str;
         }
 
         public string GetQuestion()
         {
-            return question;
+            return _question;
         }
 
         public string[] GetChoices()
         {
-            return choices;
+            return _choices;
         }
 
         public string GetAnswer()
         {
-            return answer;
+            return _answer;
         }
     }
 }
