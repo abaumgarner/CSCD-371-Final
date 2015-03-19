@@ -148,9 +148,9 @@ namespace MazeBuilder
             return _rooms[_playerRow, _playerCol].IsExit();
         }
 
-        public Point GetPosition()
+        public int[,] GetPosition()
         {
-            return new Point(_playerRow, _playerRow);
+            return new int[_playerRow, _playerCol];
         }
 
         public Room GetCurrentRoom()

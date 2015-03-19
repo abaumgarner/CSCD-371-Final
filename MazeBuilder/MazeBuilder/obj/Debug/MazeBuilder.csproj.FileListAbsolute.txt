@@ -8,3 +8,8 @@ C:\Users\Aaron\Desktop\CSCD-371-Final\MazeBuilder\MazeBuilder\bin\Debug\MazeBuil
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeBuilder\MazeBuilder\obj\Debug\MazeBuilder.csprojResolveAssemblyReference.cache
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeBuilder\MazeBuilder\obj\Debug\MazeBuilder.dll
 C:\Users\Aaron\Desktop\CSCD-371-Final\MazeBuilder\MazeBuilder\obj\Debug\MazeBuilder.pdb
+P:\CSCD-371-Final\MazeBuilder\MazeBuilder\bin\Debug\MazeBuilder.dll
+P:\CSCD-371-Final\MazeBuilder\MazeBuilder\bin\Debug\MazeBuilder.pdb
+P:\CSCD-371-Final\MazeBuilder\MazeBuilder\obj\Debug\MazeBuilder.csprojResolveAssemblyReference.cache
+P:\CSCD-371-Final\MazeBuilder\MazeBuilder\obj\Debug\MazeBuilder.dll
+P:\CSCD-371-Final\MazeBuilder\MazeBuilder\obj\Debug\MazeBuilder.pdb
