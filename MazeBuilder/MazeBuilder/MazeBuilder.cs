@@ -22,7 +22,6 @@ namespace MazeBuilder
 
             newMaze.SetRooms(RoomSetup());
             newMaze.SetDimension(_dimension);
-            RandomLocks(newMaze);
             LockBoarder(newMaze);
 
             return newMaze;
